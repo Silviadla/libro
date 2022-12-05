@@ -57,5 +57,13 @@ public class Libro {
     public void imprimirTitulo() {
         System.out.println( "Título: " + titulo + ". ");   
     }
+    
+    /**
+     * Imprime por pantalla el titulo del libro
+     */
+    public void imprimirDetalles() {
+        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas);   
+    }
+    
 }
 
