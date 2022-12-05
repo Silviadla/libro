@@ -47,9 +47,9 @@ public class Libro {
     /**
      * Devuelve el número de páginas del libro
      */
-    public void getDetalles() {
-        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas); 
-    }    
+    public String getDetalles() {
+        return "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas;   
+    }
 
     /**
      * Imprime por pantalla el nombre completo del autor
