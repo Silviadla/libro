@@ -13,6 +13,7 @@ public class Libro {
     private String autor;
     private String titulo;
     private int numeroPaginas;
+    private String numeroReferencia;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -21,6 +22,7 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = paginasLibro;
+        numeroReferencia = "--";
     }
 
     /**
@@ -45,10 +47,29 @@ public class Libro {
     }
 
     /**
+     * Devuelve el titulo del libro
+     */
+    public String getNumeroReferencia() {
+        return numeroReferencia;
+    }
+
+    /**
+     * Devuelve el nombre completo del animal
+     */
+    public void setNumeroDeReferencia(String numeroReferencia) {
+        if (numeroReferencia.length() >= 3) {
+            numeroReferencia = numeroReferencia;
+        }
+        else{
+            System.out.println("No se puede realizar esta acción, debe contener al menos 3 carácteres");
+        }
+    }
+
+    /**
      * Devuelve el número de páginas del libro
      */
     public String getDetalles() {
-        return "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas;   
+        return "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas + ", " + "Numero de la Referencia:" + numeroReferencia  ;
     }
 
     /**
@@ -69,7 +90,7 @@ public class Libro {
      * Imprime por pantalla el titulo del libro
      */
     public void imprimirDetalles() {
-        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas);   
+        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia:" + numeroReferencia );   
     }
 
 }
