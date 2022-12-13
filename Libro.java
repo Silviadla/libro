@@ -56,28 +56,27 @@ public class Libro {
     /**
      * Devuelve el nombre completo del animal
      */
-    public void setNumeroDeReferencia(String numeroLaReferencia) {
-        if (numeroLaReferencia.length() >= 3) {
-            numeroReferencia = numeroLaReferencia;
+    public void setNumeroDeReferencia(String numeroDeLaReferencia) {
+        if (numeroDeLaReferencia.length() >= 3) {
+            numeroReferencia = numeroDeLaReferencia;
         }
         else{
             System.out.println("No se puede realizar esta acción, debe contener al menos 3 carácteres");
-        }
+        } 
     }
 
     /**
      * Devuelve el número de páginas del libro
      */
-    public String getDetalles() {
-        String numeroDeReferencia;
+    public String getDetalles() { 
+        String referencia = "" ;
         if (numeroReferencia.length() == 0) {
-            numeroReferencia = "--";
+            referencia = "--";
         }
         else{
-            numeroReferencia = numeroReferencia;
-        }  
-
-        return ( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia:" + numeroReferencia );   
+            referencia = numeroReferencia;
+        }
+        return ( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia );   
     }
 
     /**
@@ -98,14 +97,14 @@ public class Libro {
      * Imprime por pantalla el titulo del libro
      */
     public void imprimirDetalles() {
-        String numeroDeReferencia;
+        String referencia = "" ;
         if (numeroReferencia.length() == 0) {
-            numeroReferencia = "--";
+            referencia = "--";
         }
         else{
-            numeroReferencia = numeroReferencia;
-        } 
-        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia:" + numeroReferencia );   
+            referencia = numeroReferencia;
+        }
+        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia );   
     }
 
 }
