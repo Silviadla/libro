@@ -1,4 +1,3 @@
-
 /**
  * Una clase que representa objetos libro.
  * Esta clase podria formar parte de un
@@ -8,12 +7,14 @@
  * @author Miguel Bayon 
  * @version 1.2
  */
+
 public class Libro {
 
     private String autor;
     private String titulo;
     private int numeroPaginas;
     private String numeroReferencia;
+    private int vecesPrestado;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -23,6 +24,7 @@ public class Libro {
         titulo = tituloLibro;
         numeroPaginas = paginasLibro;
         numeroReferencia = "";
+        vecesPrestado = 0;
     }
 
     /**
@@ -54,7 +56,14 @@ public class Libro {
     }
 
     /**
-     * Devuelve el nombre completo del animal
+     * Devuelve las veces que el libro ha sido prestado
+     */
+    public int getvecesLibroPrestado(){
+        return vecesPrestado;
+    }
+
+    /**
+     * Devuelve la referencia del libro
      */
     public void setNumeroDeReferencia(String numeroDeLaReferencia) {
         if (numeroDeLaReferencia.length() >= 3) {
@@ -66,7 +75,14 @@ public class Libro {
     }
 
     /**
-     * Devuelve el número de páginas del libro
+     * Modifica las veces que el libro ha sido prestado
+     */
+    public void prestar(){
+        vecesPrestado = +1;
+    }
+
+    /**
+     * Devuelve los detalles del libro
      */
     public String getDetalles() { 
         String referencia = "" ;
@@ -76,7 +92,8 @@ public class Libro {
         else{
             referencia = numeroReferencia;
         }
-        return ( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia );   
+
+        return ( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia + " Veces que el libro ha sido prestado: " + vecesPrestado);   
     }
 
     /**
@@ -94,7 +111,7 @@ public class Libro {
     }
 
     /**
-     * Imprime por pantalla el titulo del libro
+     * Imprime por pantalla los detalles del libro
      */
     public void imprimirDetalles() {
         String referencia = "" ;
@@ -104,7 +121,8 @@ public class Libro {
         else{
             referencia = numeroReferencia;
         }
-        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia );   
+
+        System.out.println( "Título: " + titulo + ", "+ "Autor: " + autor + ", " + "Páginas: " + numeroPaginas+ ", " + "Numero de la Referencia: " + referencia + " Veces que el libro ha sido prestado: " + vecesPrestado);   
     }
 
 }
